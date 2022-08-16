@@ -1,0 +1,62 @@
+ROTEIRO API REST COM NODE.JS
+---------------------------------------
+
+1. Crie uma pasta na área de trabalho chamada projetoApi
+
+2. Abra essa pasta com o VSCode
+
+3. Instalar o Node (Verifica se já tem no prontpt "node -v")
+
+4. Instalar as dependências do NODE
+    - Abre o terminal do VScode e digita "npm init" para criar o Package.json.
+    - Digita "npm install express" (Gerencia as requisições, rotas, urls e outras configs...)
+
+5. Cria um arquivo chamado "app.js" (Vamos iniciar a aplicação)
+
+    //Para incluir as dependências------------
+    const express = require('express');
+
+    //executar o express-------------
+    const app = express();
+
+    //vamos criar uma rota-------------------
+    app.get("/", (req, res) => {
+        res.send("Nossa requisição funcionou!!!");
+    });
+
+    //executar o servidor------------------
+    app.listen(8080, ()=>{
+        console.log("Servidor Iniciadona porta 8080...");
+    });
+
+
+6. Para rodar nosso código, digita no terminal "node app.js" e acessa o endereço "localhost:8080" no navegador
+
+7. Para testarmos (SIMULAR O ACESSO POR OUTRO APLICATIVO), vamos intalar o INSOMNIA.
+    - Clica no + > New Request 
+    - Nomeia como "Listar" do tipo GET
+    - Coloca a URL e clica em SEND
+    - Verifica se o resultado apareceu
+
+9. Mas eu não quero retornar apenas uma frase, quero um objeto JSON.
+
+    //Insere isso no icício do código, abaixo do "Express()" (Indica que vamos trabalhar com JSON)
+    app.use(express.json());
+    
+    //Altera essa parte do código
+    app.get("/", (req, res) => {
+        return res.json({
+            titulo: "Teste de API REST"
+        });
+    });
+
+10. Para testarmos, temos que reiniciar a aplicação no terminal. Dá Ctrl + C para encerrar e roda de novo
+
+11. Roda "node app.js" novamente e testarmos
+
+12. Para não termos que estar sempre reiniciando, vamos instalar o módulo NODEMON. 
+Abre o terminal como administrador e digita "npm install -g nodemon"
+
+13. Para iniciar, vai no terminal "nodemon app.js"
+
+14. Altera o retorno e verifica se atualizou automaticamente.
