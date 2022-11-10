@@ -1,0 +1,22 @@
+SERVIDOR
+Baixar libs
+//https://archive.apache.org/dist/ws/xmlrpc/apache-xmlrpc-current-bin.zip
+Compilar
+//javac -cp "xmlrpc-server-3.1.3.jar;xmlrpc-common-3.1.3.jar;." ServidorRPC.java
+Rodar
+//java -cp "xmlrpc-server-3.1.3.jar;xmlrpc-common-3.1.3.jar;ws-commons-util-1.0.2.jar;commons-logging-1.1.jar;." ServidorRPC
+
+
+CLIENTE
+Baixar libs
+//https://archive.apache.org/dist/ws/xmlrpc/apache-xmlrpc-current-bin.zip
+Compilar
+//javac -cp "xmlrpc-client-3.1.3.jar;xmlrpc-common-3.1.3.jar;." ClienteRPC.java
+Rodar
+//java -cp "xmlrpc-client-3.1.3.jar;xmlrpc-common-3.1.3.jar;ws-commons-util-1.0.2.jar;commons-logging-1.1.jar;." ClienteRPC
+
+
+COMO INSTALAR AS BIBLIOTECAS NO ECLIPSE
+Ao abrir o Eclipse, vá em “Window/Preferences”. Procure por “User Libraries” no lado esquerdo (tem um campo de busca, mas está em Java/Build Path/User Libraries) e clica em New. É solicitado um nome para a Biblioteca. Depois é só clicar em cima da Biblioteca e clicar em “Add External JARs” e selecionar a Biblioteca. Ao adicionar um projeto, quando clicamos em Next após dar o nome do projeto, aparece uma tela com algumas abas. Ao clicar em “Libraries” temos a opção de adicionar uma Biblioteca clicando em “Add Library”. Na caixa que abre, seleciona “User Library” e seleciona a Biblioteca que você deseja utilizar, das que você adicionou anteriormente e fim!
+
+Adaptado de: @claudiorodolfo
