@@ -1,7 +1,9 @@
 SERVIDOR
 Baixar libs
 //https://archive.apache.org/dist/ws/xmlrpc/apache-xmlrpc-current-bin.zip
+
 Compilar
+Antes de compilar, coloca as bibliotecas na raiz do projeto ou especifica o caminho
 //javac -cp "xmlrpc-server-3.1.3.jar;xmlrpc-common-3.1.3.jar;." ServidorRPC.java
 Rodar
 //java -cp "xmlrpc-server-3.1.3.jar;xmlrpc-common-3.1.3.jar;ws-commons-util-1.0.2.jar;commons-logging-1.1.jar;." ServidorRPC
@@ -11,6 +13,7 @@ CLIENTE
 Baixar libs
 //https://archive.apache.org/dist/ws/xmlrpc/apache-xmlrpc-current-bin.zip
 Compilar
+Antes de compilar, coloca as bibliotecas na raiz do projeto ou especifica o caminho
 //javac -cp "xmlrpc-client-3.1.3.jar;xmlrpc-common-3.1.3.jar;." ClienteRPC.java
 Rodar
 //java -cp "xmlrpc-client-3.1.3.jar;xmlrpc-common-3.1.3.jar;ws-commons-util-1.0.2.jar;commons-logging-1.1.jar;." ClienteRPC
